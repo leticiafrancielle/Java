@@ -11,24 +11,28 @@ public class AptoDoarSangue {
 		boolean primeiraDoacao;
 		
 		System.out.println("Digite seu nome: ");
-		nome = leia.next();
+		nome = leia.nextLine();
 		
 		System.out.println("Digite sua idade: ");
 		idade = leia.nextInt();
 		
-		System.out.println("É a sua primeira doação?\nResponda com true(verdadeiro) ou false(false)"); 
-		primeiraDoacao = leia.nextBoolean();
 		
 		if (idade >= 18 && idade <= 69) {
             if (idade >= 60 && idade <= 69) {
+            	System.out.println("É a sua primeira doação?\n\nResponda com true(verdadeiro) ou false(falso)"); 
+        		primeiraDoacao = leia.nextBoolean();
+        		
                 if (primeiraDoacao) {
                     System.out.println("O doador " + nome + " não está apto para doar sangue!");
+                    
                 } else {
                     System.out.println("O doador " + nome + " está apto para doar sangue!");
                 }
+                
               } else {
                 System.out.println("O doador " + nome + " está apto para doar sangue!");
             }
+            
         } else {
             System.out.println("O doador " + nome + " não está apto para doar sangue!");
         }
